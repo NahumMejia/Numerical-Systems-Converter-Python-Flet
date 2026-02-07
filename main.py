@@ -106,7 +106,8 @@ def main(page: ft.Page):
         value="Binary",
         width=300,
     )
-    btn_convert = ft.ElevatedButton("Convert", on_click=convert)
+    # Use Button instead of deprecated ElevatedButton
+    btn_convert = ft.Button("Convert", on_click=convert)
     result = ft.Text("Result:", size=18)
 
     # Add elements to the page
@@ -126,5 +127,5 @@ def main(page: ft.Page):
         )
     )
 
-# Run the application
+# Run the application using target
 ft.app(target=main)
